@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VaultForge AI — $0 Founder Operating System</title>
+  <meta name="description" content="The curated free-tool operating system for founders, creators, freelancers and AI builders who want to build, launch, automate and sell without a bloated tech stack." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              50: '#fefce8',
+              100: '#fef9c3',
+              200: '#fef08a',
+              300: '#fde047',
+              400: '#facc15',
+              500: '#eab308',
+              600: '#ca8a04',
+              700: '#a16207',
+              800: '#854d0e',
+              900: '#713f12',
+            },
+            dark: {
+              900: '#0a0a0b',
+              800: '#111113',
+              700: '#18181b',
+              600: '#27272a',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0a0a0b; }
+    .gold-gradient {
+      background: linear-gradient(135deg, #facc15 0%, #eab308 40%, #ca8a04 100%);
+    }
+    .gold-text {
+      background: linear-gradient(135deg, #fef08a 0%, #facc15 50%, #eab308 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card-glow {
+      box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.15), 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .card-glow:hover {
+      box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.35), 0 12px 40px rgba(234, 179, 8, 0.12);
+    }
+    .hero-glow {
+      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(234, 179, 8, 0.18), transparent);
+    }
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(250, 204, 21, 0.3), transparent);
+    }
+    .tool-row:nth-child(even) { background: rgba(255,255,255,0.02); }
+    .nav-blur {
+      backdrop-filter: blur(12px);
+      background: rgba(10, 10, 11, 0.85);
+    }
+  </style>
+</head>
+<body class="text-zinc-100 font-sans antialiased">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#" class="font-display font-bold text-lg tracking-tight">
+        <span class="gold-text">VaultForge</span> <span class="text-zinc-400 font-medium text-sm">AI</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm text-zinc-400">
+        <a href="#system" class="hover:text-gold-400 transition">System</a>
+        <a href="#tools" class="hover:text-gold-400 transition">Tools</a>
+        <a href="#workflows" class="hover:text-gold-400 transition">Workflows</a>
+        <a href="#pricing" class="hover:text-gold-400 transition">Pricing</a>
+      </div>
+      <a href="#pricing" class="gold-gradient text-dark-900 font-semibold text-sm px-4 py-2 rounded-full hover:opacity-90 transition">
+        Enter the Vault
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative pt-32 pb-24 overflow-hidden">
+    <div class="absolute inset-0 hero-glow"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-400 text-xs font-medium mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+          $0 Founder Tool Stack · 2026 Edition
+        </div>
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
+          Build. Launch. Automate.<br>
+          <span class="gold-text">Sell without the stack tax.</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+          The curated free-tool operating system for founders, creators, freelancers & AI builders who want to ship products and get paid — without monthly SaaS bills.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#pricing" class="gold-gradient text-dark-900 font-semibold px-8 py-3.5 rounded-full text-base hover:opacity-90 transition shadow-lg shadow-gold-500/20">
+            Get the Vault →
+          </a>
+          <a href="#system" class="text-zinc-300 border border-white/10 hover:border-gold-500/40 px-8 py-3.5 rounded-full text-base transition">
+            See how it works
+          </a>
+        </div>
+        <div class="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-zinc-500">
+          <span class="flex items-center gap-2"><span class="text-gold-400">✓</span> Top 25 free tools</span>
+          <span class="flex items-center gap-2"><span class="text-gold-400">✓</span> 8 proven workflows</span>
+          <span class="flex items-center gap-2"><span class="text-gold-400">✓</span> 24-hour launch checklist</span>
+          <span class="flex items-center gap-2"><span class="text-gold-400">✓</span> Risk labels included</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="section-divider"></div>
+
+  <!-- Who it's for -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Who this is for</h2>
+        <p class="text-zinc-400 max-w-xl mx-auto">VaultForge AI is built for people who need leverage before they have capital.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5 transition">
+          <div class="text-2xl mb-3">💸</div>
+          <h3 class="font-semibold text-lg mb-2">Broke Founders</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Need a real stack without monthly subscriptions eating runway.</p>
+        </div>
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5 transition">
+          <div class="text-2xl mb-3">🤖</div>
+          <h3 class="font-semibold text-lg mb-2">AI Beginners</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Overwhelmed by random tool recommendations and no clear path.</p>
+        </div>
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5 transition">
+          <div class="text-2xl mb-3">🛠️</div>
+          <h3 class="font-semibold text-lg mb-2">Freelancers</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Want faster client delivery workflows that actually scale.</p>
+        </div>
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5 transition">
+          <div class="text-2xl mb-3">✍️</div>
+          <h3 class="font-semibold text-lg mb-2">Creators</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Need content, landing pages, email and checkout systems that work together.</p>
+        </div>
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5 transition">
+          <div class="text-2xl mb-3">📦</div>
+          <h3 class="font-semibold text-lg mb-2">Digital Product Sellers</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Building PDFs, courses, prompts or mini-services from scratch.</p>
+        </div>
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5 transition">
+          <div class="text-2xl mb-3">⚙️</div>
+          <h3 class="font-semibold text-lg mb-2">Operators & Automation Builders</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Want high-leverage workflows without paying for advanced tools.</p>
+        </div>
+      </div>
+      <p class="text-center text-zinc-500 text-sm mt-10 max-w-2xl mx-auto">
+        This is not a generic tool dump. This is a practical founder operating stack.
+      </p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- The System -->
+  <section id="system" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">The $0 Founder Operating System</h2>
+        <p class="text-zinc-400 max-w-xl mx-auto">Most people fail because they collect tools instead of building systems. VaultForge organizes tools into 8 founder functions.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-dark-800 border border-white/5 rounded-xl p-5 text-center">
+          <div class="text-gold-400 text-2xl mb-2">💡</div>
+          <div class="font-semibold">1. Think</div>
+          <div class="text-xs text-zinc-500 mt-1">AI assistants, research engines, idea validators</div>
+        </div>
+        <div class="bg-dark-800 border border-white/5 rounded-xl p-5 text-center">
+          <div class="text-gold-400 text-2xl mb-2">✍️</div>
+          <div class="font-semibold">2. Write</div>
+          <div class="text-xs text-zinc-500 mt-1">Scripts, prompts, emails, scripts, docs</div>
+        </div>
+        <div class="bg-dark-800 border border-white/5 rounded-xl p-5 text-center">
+          <div class="text-gold-400 text-2xl mb-2">🎨</div>
+          <div class="font-semibold">3. Design</div>
+          <div class="text-xs text-zinc-500 mt-1">Assets, content, landing pages, thumbnails</div>
+        </div>
+        <div class="bg-dark-800 border border-white/5 rounded-xl p-5 text-center">
+          <div class="text-gold-400 text-2xl mb-2">🏗️</div>
+          <div class="font-semibold">4. Build</div>
+          <div class="text-xs text-zinc-500 mt-1">Websites, apps, forms, databases, dashboards</div>
+        </div>
+        <div class="bg-dark-800 border border-white/5 rounded-xl p-5 text-center">
+          <div class="text-gold-400 text-2xl mb-2">⚡</div>
+          <div class="font-semibold">5. Automate</div>
+          <div class="text-xs text-zinc-500 mt-1">Lead capture, delivery flows, notifications</div>
+        </div>
+        <div class="bg-dark-800 border border-white/5 rounded-xl p-5 text-center">
+          <div class="text-gold-400 text-2xl mb-2">💰</div>
+          <div class="font-semibold">6. Sell</div>
+          <div class="text-xs text-zinc-500 mt-1">Checkout links, product pages, payment flows</div>
+        </div>
+        <div class="bg-dark-800 border border-white/5 rounded-xl p-5 text-center">
+          <div class="text-gold-400 text-2xl mb-2">📦</div>
+          <div class="font-semibold">7. Deliver</div>
+          <div class="text-xs text-zinc-500 mt-1">PDFs, templates, docs, portals, email sequences</div>
+        </div>
+        <div class="bg-dark-800 border border-white/5 rounded-xl p-5 text-center">
+          <div class="text-gold-400 text-2xl mb-2">📊</div>
+          <div class="font-semibold">8. Track</div>
+          <div class="text-xs text-zinc-500 mt-1">Metrics, CRM, conversion tracking</div>
+        </div>
+      </div>
+      <div class="mt-10 bg-gold-500/5 border border-gold-500/20 rounded-2xl p-6 max-w-3xl mx-auto text-center">
+        <p class="text-gold-300 font-medium text-sm uppercase tracking-wider mb-2">The VaultForge Rule</p>
+        <p class="text-zinc-300">Do not upgrade until one of these happens: you hit a real usage limit, a paid feature directly saves time or creates money, or a client requires higher quality, custom domain, team access, or compliance.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Tool Vault -->
+  <section id="tools" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Top 25 Tool Vault</h2>
+        <p class="text-zinc-400 max-w-xl mx-auto">Every tool chosen for leverage, not hype. Risk labels included so you know the trade-offs.</p>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-white/10">
+        <table class="w-full text-sm text-left">
+          <thead class="bg-dark-800 text-zinc-400 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="px-4 py-3 font-medium">#</th>
+              <th class="px-4 py-3 font-medium">Tool</th>
+              <th class="px-4 py-3 font-medium hidden sm:table-cell">Category</th>
+              <th class="px-4 py-3 font-medium">Best Use Case</th>
+              <th class="px-4 py-3 font-medium hidden md:table-cell">Monetization Angle</th>
+              <th class="px-4 py-3 font-medium">Risk</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5">
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">1</td><td class="px-4 py-3 font-medium text-gold-400">ChatGPT</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">AI Assistant</td><td class="px-4 py-3">Product specs, scripts, offers</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Prompt packs, audits</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">2</td><td class="px-4 py-3 font-medium text-gold-400">Claude</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">AI Assistant</td><td class="px-4 py-3">Long-form writing, analysis</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">SOPs, research</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">3</td><td class="px-4 py-3 font-medium text-gold-400">Gemini</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">AI + Google</td><td class="px-4 py-3">Research, multimodal</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Content services</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">4</td><td class="px-4 py-3 font-medium text-gold-400">Perplexity</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Research</td><td class="px-4 py-3">Source-backed research</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Reports, lists</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">5</td><td class="px-4 py-3 font-medium text-gold-400">Canva</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Design</td><td class="px-4 py-3">PDFs, thumbnails, templates</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Templates, brand kits</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-400">Med</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">6</td><td class="px-4 py-3 font-medium text-gold-400">Figma</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Design</td><td class="px-4 py-3">Mockups, wireframes</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">UI kits, landing pages</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">7</td><td class="px-4 py-3 font-medium text-gold-400">Notion</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Workspace</td><td class="px-4 py-3">Dashboards, SOPs, client portals</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Templates, systems</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">8</td><td class="px-4 py-3 font-medium text-gold-400">Google Docs / Sheets</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Tracking</td><td class="px-4 py-3">CRM trackers, content calendars</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Dashboards, calculators</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">9</td><td class="px-4 py-3 font-medium text-gold-400">Looker Studio</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Analytics</td><td class="px-4 py-3">Dashboards, reports</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Client reporting</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">10</td><td class="px-4 py-3 font-medium text-gold-400">Airtable</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Database</td><td class="px-4 py-3">CRM, content ops</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Operational systems</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-400">Med</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">11</td><td class="px-4 py-3 font-medium text-gold-400">Tally</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Forms</td><td class="px-4 py-3">Lead capture, intake</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Funnels, systems</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">12</td><td class="px-4 py-3 font-medium text-gold-400">Zapier</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Automation</td><td class="px-4 py-3">Two-app workflows</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Setup services</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-400">Med</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">13</td><td class="px-4 py-3 font-medium text-gold-400">Make</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Automation</td><td class="px-4 py-3">Multi-app workflows</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Automation blueprints</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-400">Med</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">14</td><td class="px-4 py-3 font-medium text-gold-400">n8n</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Automation</td><td class="px-4 py-3">Self-hosted workflows</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Advanced automation</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">15</td><td class="px-4 py-3 font-medium text-gold-400">Supabase</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Backend</td><td class="px-4 py-3">Auth, database, storage</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">SaaS MVPs, portals</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">16</td><td class="px-4 py-3 font-medium text-gold-400">GitHub Pages</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Hosting</td><td class="px-4 py-3">Static sites, docs</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Landing page builds</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">17</td><td class="px-4 py-3 font-medium text-gold-400">Vercel</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Deployment</td><td class="px-4 py-3">Next.js sites, MVPs</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">MVP deploys</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">18</td><td class="px-4 py-3 font-medium text-gold-400">Webflow</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">No-code</td><td class="px-4 py-3">Marketing sites</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Client sites, templates</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-400">Med</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">19</td><td class="px-4 py-3 font-medium text-gold-400">Stripe Links</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Payments</td><td class="px-4 py-3">Checkout links</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Products, services</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">20</td><td class="px-4 py-3 font-medium text-gold-400">Gumroad</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Commerce</td><td class="px-4 py-3">Digital products</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">PDFs, memberships</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">21</td><td class="px-4 py-3 font-medium text-gold-400">Whop</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Commerce</td><td class="px-4 py-3">Communities, files</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Products, memberships</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-400">Med</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">22</td><td class="px-4 py-3 font-medium text-gold-400">Beehiiv</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Email</td><td class="px-4 py-3">Newsletters, sequences</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Audience assets</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-400">Med</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">23</td><td class="px-4 py-3 font-medium text-gold-400">MailerLite</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Email</td><td class="px-4 py-3">Lightweight campaigns</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Email systems</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">24</td><td class="px-4 py-3 font-medium text-gold-400">CapCut</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Video</td><td class="px-4 py-3">Short-form editing</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Promo assets</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">25</td><td class="px-4 py-3 font-medium text-gold-400">DaVinci Resolve</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Video Editing</td><td class="px-4 py-3">Professional editing</td><td class="px-4 py-3 hidden md:table-cell text-zinc-400">Promo assets</td><td class="px-4 py-3"><span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">Low</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Workflows -->
+  <section id="workflows" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">8 Workflows to go from idea → income</h2>
+        <p class="text-zinc-400 max-w-xl mx-auto">Proven combinations that turn free tools into sellable results.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-lg gold-gradient text-dark-900 font-bold flex items-center justify-center text-sm">1</span>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">$29 PDF Product</h3>
+              <p class="text-zinc-400 text-sm mb-3">ChatGPT + Notion + Canva → Drive → Gumroad</p>
+              <p class="text-xs text-zinc-500">Create and sell a PDF, checklist or template. $0–$49 · Low risk · Automate after 5–10 sales</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-lg gold-gradient text-dark-900 font-bold flex items-center justify-center text-sm">2</span>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">$197 Setup Service</h3>
+              <p class="text-zinc-400 text-sm mb-3">Notion + ChatGPT → Docs → Stripe</p>
+              <p class="text-xs text-zinc-500">Collect info, deliver a custom setup plan. $97–$497 · Scope creep risk · Fixed deliverables</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-lg gold-gradient text-dark-900 font-bold flex items-center justify-center text-sm">3</span>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Lead Funnel</h3>
+              <p class="text-zinc-400 text-sm mb-3">Tally → Notion → Sheet → Canva → Stripe</p>
+              <p class="text-xs text-zinc-500">Capture leads, deliver free guide, sell upgrade. Low risk · Data privacy risk</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-lg gold-gradient text-dark-900 font-bold flex items-center justify-center text-sm">4</span>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Client Dashboard</h3>
+              <p class="text-zinc-400 text-sm mb-3">Airtable → Tally → Looker → Docs</p>
+              <p class="text-xs text-zinc-500">Build a simple client reporting system. $149–$750 · Data privacy risk</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-lg gold-gradient text-dark-900 font-bold flex items-center justify-center text-sm">5</span>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Landing Page MVP</h3>
+              <p class="text-zinc-400 text-sm mb-3">ChatGPT → Figma → GitHub/Vercel → Stripe</p>
+              <p class="text-xs text-zinc-500">Launch a one-page offer. $29–$197 · $500+ · Weak copy risk</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-lg gold-gradient text-dark-900 font-bold flex items-center justify-center text-sm">6</span>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Content Engine</h3>
+              <p class="text-zinc-400 text-sm mb-3">ChatGPT → Canva → CapCut → Beehiiv/Gumroad</p>
+              <p class="text-xs text-zinc-500">Create short-form content to sell a product. $49–$250 · Platform rules risk</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-lg gold-gradient text-dark-900 font-bold flex items-center justify-center text-sm">7</span>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Automation Starter Kit</h3>
+              <p class="text-zinc-400 text-sm mb-3">Tally → Zapier/Make → Drive → Gmail</p>
+              <p class="text-xs text-zinc-500">Automate lead capture and fulfillment. $199–$1,500 · Broken automation risk</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-glow bg-dark-800 rounded-2xl p-6 border border-white/5">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-lg gold-gradient text-dark-900 font-bold flex items-center justify-center text-sm">8</span>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Founder Vault Product</h3>
+              <p class="text-zinc-400 text-sm mb-3">Notion → Canva → Whop / MailerLite → Stripe</p>
+              <p class="text-xs text-zinc-500">Sell a packaged vault with updates. $29–$49 + $197 · Needs updates</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Monetization Angles -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">10 Monetization Angles</h2>
+        <p class="text-zinc-400 max-w-xl mx-auto">Fast offers you can build from this stack.</p>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-white/10">
+        <table class="w-full text-sm text-left">
+          <thead class="bg-dark-800 text-zinc-400 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="px-4 py-3">#</th>
+              <th class="px-4 py-3">Offer</th>
+              <th class="px-4 py-3 hidden sm:table-cell">Tools</th>
+              <th class="px-4 py-3">Price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5">
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">1</td><td class="px-4 py-3 font-medium">AI Tool Stack PDF</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">ChatGPT + Canva + Stripe</td><td class="px-4 py-3 text-gold-400 font-medium">$29</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">2</td><td class="px-4 py-3 font-medium">Pro Founder Vault</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Canva + Notion + Whop</td><td class="px-4 py-3 text-gold-400 font-medium">$49</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">3</td><td class="px-4 py-3 font-medium">Custom Founder Setup</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Tally + Docs + ChatGPT</td><td class="px-4 py-3 text-gold-400 font-medium">$197</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">4</td><td class="px-4 py-3 font-medium">Local Business AI Audit</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">ChatGPT + Docs + Stripe</td><td class="px-4 py-3 text-gold-400 font-medium">$97–$297</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">5</td><td class="px-4 py-3 font-medium">Landing Page Copy Pack</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">ChatGPT + Canva + GitHub</td><td class="px-4 py-3 text-gold-400 font-medium">$49–$149</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">6</td><td class="px-4 py-3 font-medium">Notion Operating System</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Notion + Canva + Gumroad</td><td class="px-4 py-3 text-gold-400 font-medium">$29–$99</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">7</td><td class="px-4 py-3 font-medium">Automation Setup</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Tally + Zapier/Make + Sheets</td><td class="px-4 py-3 text-gold-400 font-medium">$199–$1,500</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">8</td><td class="px-4 py-3 font-medium">Short-form Content Kit</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">ChatGPT + Canva + CapCut</td><td class="px-4 py-3 text-gold-400 font-medium">$49–$297</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">9</td><td class="px-4 py-3 font-medium">Client Dashboard</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Airtable + Looker Studio</td><td class="px-4 py-3 text-gold-400 font-medium">$250–$1,150</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 text-zinc-500">10</td><td class="px-4 py-3 font-medium">MVP Launch Sprint</td><td class="px-4 py-3 hidden sm:table-cell text-zinc-400">Figma + Vercel + Supabase</td><td class="px-4 py-3 text-gold-400 font-medium">$500+</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 text-sm">
+        <span class="text-zinc-500">Highest-leverage path:</span>
+        <div class="flex items-center gap-2 font-medium">
+          <span class="px-3 py-1 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/20">$29 PDF</span>
+          <span class="text-zinc-600">→</span>
+          <span class="px-3 py-1 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/20">$49 Pro Vault</span>
+          <span class="text-zinc-600">→</span>
+          <span class="px-3 py-1 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/20">$197 Setup</span>
+          <span class="text-zinc-600">→</span>
+          <span class="px-3 py-1 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/20">$500+ Build</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Risk Map -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Safety + Risk Map</h2>
+        <p class="text-zinc-400 max-w-xl mx-auto">Know the risks. Control the variables.</p>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-white/10">
+        <table class="w-full text-sm text-left">
+          <thead class="bg-dark-800 text-zinc-400 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="px-4 py-3">Risk</th>
+              <th class="px-4 py-3">What can go wrong</th>
+              <th class="px-4 py-3">Control</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5">
+            <tr class="tool-row"><td class="px-4 py-3 font-medium">Free tier changes</td><td class="px-4 py-3 text-zinc-400">Tool limits/prices change</td><td class="px-4 py-3 text-zinc-300">Verify current pricing</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 font-medium">Data privacy</td><td class="px-4 py-3 text-zinc-400">Customer info exposed</td><td class="px-4 py-3 text-zinc-300">Minimal data, avoid sensitive</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 font-medium">Payment disputes</td><td class="px-4 py-3 text-zinc-400">Refunds or chargebacks</td><td class="px-4 py-3 text-zinc-300">Clear deliverables + policy</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 font-medium">AI hallucinations</td><td class="px-4 py-3 text-zinc-400">False claims in content</td><td class="px-4 py-3 text-zinc-300">Fact-check before publishing</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 font-medium">Commercial rights</td><td class="px-4 py-3 text-zinc-400">Asset license limits</td><td class="px-4 py-3 text-zinc-300">Use owned assets or verify</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 font-medium">Automation failure</td><td class="px-4 py-3 text-zinc-400">Zap/Make breaks</td><td class="px-4 py-3 text-zinc-300">Test manually first</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 font-medium">Platform lock-in</td><td class="px-4 py-3 text-zinc-400">Rules change</td><td class="px-4 py-3 text-zinc-300">Backup via Drive/email</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 font-medium">Scope creep</td><td class="px-4 py-3 text-zinc-400">Unlimited consulting</td><td class="px-4 py-3 text-zinc-300">Fixed output + revision count</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 font-medium">Public exposure</td><td class="px-4 py-3 text-zinc-400">Files made public</td><td class="px-4 py-3 text-zinc-300">Check permissions</td></tr>
+            <tr class="tool-row"><td class="px-4 py-3 font-medium">Overclaiming income</td><td class="px-4 py-3 text-zinc-400">Trust / legal risk</td><td class="px-4 py-3 text-zinc-300">Say “designed to help,” not “guarantees”</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center text-zinc-500 text-xs mt-6 max-w-2xl mx-auto">
+        Important: Tool pricing, limits, and commercial rights can change. Verify current terms, privacy policy, and licenses before using any tool for client work or paid products. This product does not guarantee revenue.
+      </p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- 24-Hour Checklist -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">24-Hour Launch Checklist</h2>
+        <p class="text-zinc-400 max-w-xl mx-auto">Go from idea to first sale in 24 hours.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-5">
+        <div class="bg-dark-800 border border-white/5 rounded-2xl p-6">
+          <div class="text-gold-400 font-display font-bold text-lg mb-4">1. BUILD</div>
+          <ul class="space-y-2 text-sm text-zinc-300">
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Pick one offer</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Write a clear promise</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Create payment link</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Build PDF/template</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Add CTA page</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Export the PDF</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Upload to Drive/Whop/Gumroad</li>
+          </ul>
+        </div>
+        <div class="bg-dark-800 border border-white/5 rounded-2xl p-6">
+          <div class="text-gold-400 font-display font-bold text-lg mb-4">2. SELL</div>
+          <ul class="space-y-2 text-sm text-zinc-300">
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Write one post</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Send 30 DMs</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Post in 3 communities</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Ask 10 people what they’re building</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Offer $29 PDF first</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Offer $197 setup to serious buyers</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Log replies in Sheets</li>
+          </ul>
+        </div>
+        <div class="bg-dark-800 border border-white/5 rounded-2xl p-6">
+          <div class="text-gold-400 font-display font-bold text-lg mb-4">3. DELIVER</div>
+          <ul class="space-y-2 text-sm text-zinc-300">
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Confirm payment</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Send product immediately</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Ask what they’re building</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Recommend one workflow</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Offer custom setup</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Collect testimonial (after delivery)</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Improve based on questions</li>
+          </ul>
+        </div>
+        <div class="bg-dark-800 border border-white/5 rounded-2xl p-6">
+          <div class="text-gold-400 font-display font-bold text-lg mb-4">4. UPGRADE</div>
+          <ul class="space-y-2 text-sm text-zinc-300">
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Add 5 more tools</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Add 3 more workflows</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Add buyer examples</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Add Notion version</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Add Whop listing</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Add affiliate/referral offer</li>
+            <li class="flex gap-2"><span class="text-gold-500">□</span> Raise price if demand exists</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 text-center">
+        <p class="text-zinc-400 text-sm mb-2">24-Hour Revenue Target</p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm">
+          <span class="px-4 py-2 rounded-full bg-dark-800 border border-white/10">Minimum: 1 sale at $29</span>
+          <span class="px-4 py-2 rounded-full bg-dark-800 border border-white/10">Good: 3–5 sales at $29/$49</span>
+          <span class="px-4 py-2 rounded-full bg-dark-800 border border-gold-500/30 text-gold-400">Strong: 1 PDF + 1 setup + 1 client lead</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Choose Your Vault</h2>
+        <p class="text-zinc-400 max-w-xl mx-auto">One stack. Three ways to win.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <!-- $29 -->
+        <div class="card-glow bg-dark-800 rounded-2xl p-8 border border-white/10 flex flex-col">
+          <div class="mb-6">
+            <div class="text-zinc-400 text-sm font-medium mb-1">Quick Vault</div>
+            <div class="font-display text-4xl font-bold gold-text">$29</div>
+            <p class="text-zinc-500 text-sm mt-2">Essential tools. Immediate direction.</p>
+          </div>
+          <ul class="space-y-3 text-sm text-zinc-300 mb-8 flex-1">
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Top 25 tools</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Use case for each</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Basic workflows</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> 24-hour checklist</li>
+          </ul>
+          <p class="text-xs text-zinc-500 mb-6">Best for: Beginners, broke founders, creators, freelancers.</p>
+          <a href="#" class="block text-center border border-gold-500/40 text-gold-400 font-semibold py-3 rounded-full hover:bg-gold-500/10 transition">
+            Get Quick Vault →
+          </a>
+        </div>
+
+        <!-- $49 -->
+        <div class="card-glow bg-dark-800 rounded-2xl p-8 border-2 border-gold-500/50 flex flex-col relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full gold-gradient text-dark-900 text-xs font-bold">
+            MOST POPULAR
+          </div>
+          <div class="mb-6">
+            <div class="text-zinc-400 text-sm font-medium mb-1">Pro Vault</div>
+            <div class="font-display text-4xl font-bold gold-text">$49</div>
+            <p class="text-zinc-500 text-sm mt-2">Complete monetization version.</p>
+          </div>
+          <ul class="space-y-3 text-sm text-zinc-300 mb-8 flex-1">
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Everything in Quick Vault</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Expanded monetization map</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> 10 offer ideas</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Swipe file templates</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Risk map</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Whop product listing copy</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Founder checklist guide</li>
+          </ul>
+          <p class="text-xs text-zinc-500 mb-6">Best for: Builders who want to turn the stack into products or services.</p>
+          <a href="#" class="block text-center gold-gradient text-dark-900 font-semibold py-3 rounded-full hover:opacity-90 transition shadow-lg shadow-gold-500/20">
+            Upgrade to Pro →
+          </a>
+        </div>
+
+        <!-- $197 -->
+        <div class="card-glow bg-dark-800 rounded-2xl p-8 border border-white/10 flex flex-col">
+          <div class="mb-6">
+            <div class="text-zinc-400 text-sm font-medium mb-1">Founder Setup</div>
+            <div class="font-display text-4xl font-bold gold-text">$197</div>
+            <p class="text-zinc-500 text-sm mt-2">Your idea. Our system.</p>
+          </div>
+          <ul class="space-y-3 text-sm text-zinc-300 mb-8 flex-1">
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Personalized tool stack</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Custom workflow map</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Offer structure</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Pricing recommendation</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Sales script</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> 24-hour launch plan</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> One-page launch doc</li>
+          </ul>
+          <p class="text-xs text-zinc-500 mb-6">Best for: Founders, creators, freelancers, operators who want a direct plan.</p>
+          <a href="#" class="block text-center border border-gold-500/40 text-gold-400 font-semibold py-3 rounded-full hover:bg-gold-500/10 transition">
+            Book Founder Setup →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Footer CTA -->
+  <section class="py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">
+        Build with no budget.<br>
+        <span class="gold-text">Launch with structure. Sell with clarity.</span>
+      </h2>
+      <p class="text-zinc-400 mb-8">If you have $0 for software, this vault shows you what to use, what each tool is for, how to combine them, what to sell with them, and what risks to avoid.</p>
+      <a href="#pricing" class="inline-block gold-gradient text-dark-900 font-semibold px-10 py-4 rounded-full text-lg hover:opacity-90 transition shadow-lg shadow-gold-500/25">
+        Enter the Vault →
+      </a>
+      <p class="mt-8 text-xs text-zinc-600">VaultForge AI · Build → Launch → Automate → Sell · $0 to Income</p>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/5 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
+      <div class="font-display font-semibold"><span class="gold-text">VaultForge</span> AI</div>
+      <div>© 2026 VaultForge AI. Not affiliated with any of the tools listed.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
